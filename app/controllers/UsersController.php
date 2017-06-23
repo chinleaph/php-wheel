@@ -16,6 +16,8 @@ class UsersController extends Controller
     }
 
     public function about(){
-        echo dt_format();
+        require APP_PATH.'/libs/StringFormat.php';
+        $strfmt = new StringFormat('大家好，我是John Malon');
+        echo $strfmt->toUpper()->addMark()->toString();
     }
 }

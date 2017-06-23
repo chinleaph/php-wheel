@@ -1,5 +1,9 @@
 # php-wheel
 学习怎么造轮子
 
-##参考资料
-https://github.com/chinleaph/php-wheel.git
+## 参考资料
+http://www.awaimai.com/128.html
+
+## 更新说明
+### · 2017-05-24
+1. 参数处理

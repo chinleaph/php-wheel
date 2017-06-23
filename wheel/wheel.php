@@ -34,7 +34,9 @@ class Wheel
 
         //参数
         $url = $_SERVER['REQUEST_URI'];
-        $position = strpos($url,'?');
+        $paramget = $_GET;  //?后面的参数
+        var_dump($paramget);
+        $position = strpos($url,'?');   //取?前面的参数
         $url = $position === false ? $url : substr($url,0,$position);
         $url = trim($url,'/');
 
