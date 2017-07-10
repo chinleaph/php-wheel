@@ -18,11 +18,18 @@ class StringFormat{
     }
 
     public function addMark(){
-        $this->_str .= "\r   ---我是小尾巴";
+        $this->_str .= "<br> ---This is a tail";
         return $this;
     }
 
     public function toString(){
         return $this->_str;
+    }
+
+    public function testcb($callback=null){
+        if(is_callable($callback)){
+            return call_user_func_array($callback,array($this->_str,0));
+        }
+        return null;
     }
 }

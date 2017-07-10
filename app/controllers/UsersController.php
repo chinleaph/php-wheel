@@ -17,7 +17,17 @@ class UsersController extends Controller
 
     public function about(){
         require APP_PATH.'/libs/StringFormat.php';
-        $strfmt = new StringFormat('大家好，我是John Malon');
+        $strfmt = new StringFormat('Hello,I\'m John Malon');
+        $callback = function($str,$isup){
+            if($isup){
+                $str = strtoupper($str);
+            }
+            return strrev($str);
+        };
+//        $callback = (object)null;
+        echo $strfmt->testcb($callback);
+        echo '<br>';
         echo $strfmt->toUpper()->addMark()->toString();
+        echo '<br>';
     }
 }

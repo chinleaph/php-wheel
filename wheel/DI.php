@@ -13,10 +13,11 @@ class DI{
             throw new Exception('Service "'.$name.'" wasn\'t found in the dependency injection container');
         }
 
+        $instance = null;
         if(is_object($definition)){
-            $instace = call_user_func($definition);
+            $instance = call_user_func($definition);
         }
 
-        return $instace;
+        return $instance;
     }
 }
